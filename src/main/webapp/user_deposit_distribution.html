@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head lang="zh_CN">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>用户购买情况</title>
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/bootstrap-select.min.css">
+    <link rel="stylesheet" href="./css/template.css">
+    <link rel="stylesheet" href="./css/user_deposit_distribution.css">
+    <link rel="stylesheet" href="./css/common.css">
+</head>
+<body>
+<div class="container" id="userDepositContainerDiv">
+    <div id="erp_tab_group" class="btn-group" role="group">
+        <button id="ec_average" type="button" class="btn btn-default col-xs-4">人均交易额</button>
+        <button id="ec_total" type="button" class="btn btn-default col-xs-4">总交易额</button>
+        <button id="ec_percent" type="button" class="btn btn-default col-xs-4">人数占比</button>
+    </div>
+    <div id="echarts" style="height: 300px"></div>
+    <hr align="left" color="#FF0000" size="15"/>
+    <span id="product_type">
+        <label id="label_product_type">产品类目</label>
+        <select id="sel_product" class="selectpicker" data-width="60%">
+            <option value="0" selected>全部产品</option>
+        </select>
+    </span>
+    <hr align="left" color="#FF0000" size="15"/>
+    <form class="form-inline">
+        <div class="form-group col-xs-6">
+            <input type="text" class="form-control" id="beginTime" placeholder="开始时间">
+        </div>
+        <div class="form-group col-xs-6">
+            <input type="text" class="form-control" id="endTime" placeholder="结束时间">
+        </div>
+    </form>
+    <button id="refresh" type="button" class="btn btn-block btn-primary">刷新</button>
+
+    <div id="datePlugin"></div>
+</div>
+<div class="navbar navbar-default navbar-fixed-bottom" style="display: none;" id="userDepositBottomDiv">
+    <div class="container-fluid">
+        <ul class="nav">
+            <li role="presentation" class="col-xs-4 erp_nav_bottom dropup">
+                <a role="button" class="dropdown-toggle" data-toggle="dropdown">
+                    交易额<span class="caret" style="margin-left: 6px;"></span>
+                </a>
+                <ul class="dropdown-menu">
+                    <li>
+                        <a href="./index.html">分类统计</a>
+                    </li>
+                    <li>
+                        <a href="./trade_real_time.html">分时统计</a>
+                    </li>
+                </ul>
+            </li>
+            <li role="presentation" class="col-xs-4 erp_nav_bottom dropup">
+                <a href="./users_statistic.html">用户量</a>
+                <!--
+                <a role="button" class="dropdown-toggle" data-toggle="dropdown">
+                    用户量<span class="caret" style="margin-left: 6px;"></span>
+                </a>
+                <ul class="dropdown-menu">
+                    <li>
+                        <a href="./users_statistic.html">总量</a>
+                    </li>
+                    <li>
+                        <a href="./trade_real_time.html">每日</a>
+                    </li>
+                </ul>
+                -->
+            </li>
+            <li role="presentation" class="col-xs-4 erp_nav_bottom dropup">
+                <a role="button" class="dropdown-toggle" data-toggle="dropdown">
+                    活跃度<span class="caret" style="margin-left: 6px;"></span>
+                </a>
+                <ul class="dropdown-menu">
+                    <li>
+                        <a href="./user_deposit_distribution.html">购买情况</a>
+                    </li>
+                    <li>
+                        <a href="./monthly_task.html">任务进度</a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</div>
+<script src="./js/util.js" type="text/javascript"></script>
+<script src="./js/config.js" type="text/javascript"></script>
+<script src="./js/jquery-1.11.3.min.js" type="text/javascript"></script>
+<script src="./js/bootstrap.min.js" type="text/javascript"></script>
+<script src="./js/bootstrap-select.min.js" type="text/javascript"></script>
+<script src="./js/echarts/echarts.js" type="text/javascript"></script>
+<script type="text/javascript" src="./js/date.js" ></script>
+<script type="text/javascript" src="./js/iscroll.js" ></script>
+<script src="./js/user_deposit_distribution.js" type="text/javascript"></script>
+</body>
+</html>

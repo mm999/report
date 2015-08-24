@@ -1,0 +1,27 @@
+body {
+    font-family: "微软雅黑";
+}
+
+.container {
+    /*text-align: center;*/
+    padding-bottom: 70px;
+}
+
+.btn-default {
+    font-size: 12px;
+}
+
+.erp_form div label {
+    font-size: 15px;
+    padding-left: 3px;
+}
+
+.erp_nav_bottom {
+    text-align: center;
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+#erp_tab_group {
+    margin: 10px;
+}

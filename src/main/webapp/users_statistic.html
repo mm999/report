@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head lang="zh_CN">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>交易量统计</title>
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/template.css">
+    <link rel="stylesheet" href="./css/users_statistic.css">
+</head>
+<body>
+<div class="container">
+    <!--
+    <div id="erp_tab_group" class="btn-group" role="group">
+        <button id="ec_day" type="button" class="btn btn-default col-xs-3">日交易量</button>
+        <button id="ec_week" type="button" class="btn btn-default col-xs-3">周交易量</button>
+        <button id="ec_month" type="button" class="btn btn-default col-xs-3">月交易量</button>
+        <button id="show_date_picker" type="button" class="btn btn-default col-xs-3">自定义</button>
+    </div>
+
+    <form id="date_picker" class="erp_form hide">
+        <div class="form-group">
+            <label for="beginTime">开始时间</label>
+            <input type="text" class="form-control" id="beginTime" placeholder="开始时间">
+        </div>
+        <div class="form-group">
+            <label for="endTime">结束时间</label>
+            <input type="text" class="form-control" id="endTime" placeholder="结束时间">
+        </div>
+        <div class="form-group">
+            <button id="ec_custom" type="button" class="btn btn-primary btn-block">查询</button>
+        </div>
+    </form>
+    <div id="datePlugin"></div>
+    -->
+    <div id="echarts_total" style="height: 400px;"></div>
+    <div id="echarts_statistic" style="height: 400px;"></div>
+</div>
+<div class="navbar navbar-default navbar-fixed-bottom" id="userBottomDiv" style="display:none;">
+    <div class="container-fluid">
+        <ul class="nav">
+            <li role="presentation" class="col-xs-4 erp_nav_bottom dropup">
+                <a role="button" class="dropdown-toggle" data-toggle="dropdown">
+                    交易额<span class="caret" style="margin-left: 6px;"></span>
+                </a>
+                <ul class="dropdown-menu">
+                    <li>
+                        <a href="./index.html">分类统计</a>
+                    </li>
+                    <li>
+                        <a href="./trade_real_time.html">分时统计</a>
+                    </li>
+                </ul>
+            </li>
+            <li role="presentation" class="col-xs-4 erp_nav_bottom dropup">
+                <a href="./users_statistic.html">用户量</a>
+                <!--
+                <a role="button" class="dropdown-toggle" data-toggle="dropdown">
+                    用户量<span class="caret" style="margin-left: 6px;"></span>
+                </a>
+                <ul class="dropdown-menu">
+                    <li>
+                        <a href="./users_statistic.html">总量</a>
+                    </li>
+                    <li>
+                        <a href="./trade_real_time.html">每日</a>
+                    </li>
+                </ul>
+                -->
+            </li>
+            <li role="presentation" class="col-xs-4 erp_nav_bottom dropup">
+                <a role="button" class="dropdown-toggle" data-toggle="dropdown">
+                    活跃度<span class="caret" style="margin-left: 6px;"></span>
+                </a>
+                <ul class="dropdown-menu">
+                    <li>
+                        <a href="./user_deposit_distribution.html">购买情况</a>
+                    </li>
+                    <li>
+                        <a href="./monthly_task.html">任务进度</a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</div>
+<script src="./js/util.js" type="text/javascript"></script>
+<script src="./js/config.js" type="text/javascript"></script>
+<script src="./js/jquery-1.11.3.min.js" type="text/javascript"></script>
+<script src="./js/bootstrap.min.js" type="text/javascript"></script>
+<script src="./js/echarts/echarts.js" type="text/javascript"></script>
+<script type="text/javascript" src="./js/date.js" ></script>
+<script type="text/javascript" src="./js/iscroll.js" ></script>
+<script src="./js/users_statistic.js" type="text/javascript"></script>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration
+  PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+  "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+
+<generatorConfiguration>
+    <classPathEntry location="mysql-connector-java-5.1.26-bin.jar" />
+
+    <context id="stormDB" targetRuntime="MyBatis3">
+
+        <commentGenerator>
+            <property name="suppressDate" value="true" />
+        </commentGenerator>
+
+        <jdbcConnection driverClass="com.mysql.jdbc.Driver"
+            connectionURL="jdbc:mysql://localhost/thunder" userId="root" password="root">
+        </jdbcConnection>
+
+        <javaTypeResolver>
+            <property name="forceBigDecimals" value="false" />
+        </javaTypeResolver>
+
+        <javaModelGenerator targetPackage="com.weshare.thunder.model"
+            targetProject="../../src/main/java">
+            <property name="enableSubPackages" value="true" />
+            <property name="trimStrings" value="true" />
+        </javaModelGenerator>
+
+        <sqlMapGenerator targetPackage="com.weshare.thunder"
+            targetProject="../../src/main/resources/mapper">
+            <property name="enableSubPackages" value="true" />
+        </sqlMapGenerator>
+
+        <javaClientGenerator type="XMLMAPPER"
+            targetPackage="com.weshare.thunder.dao" targetProject="../../src/main/java">
+            <property name="enableSubPackages" value="true" />
+        </javaClientGenerator>
+
+        <!--<table tableName="bank_card" domainObjectName="BankCard"/>-->
+        <!--<table tableName="capital_deposit_inout" domainObjectName="CapitalDepositInOut"/>-->
+        <!--<table tableName="config_bank" domainObjectName="ConfigBank"/>-->
+        <!--<table tableName="config_credit_type" domainObjectName="ConfigCreditType"/>-->
+        <!--<table tableName="config_deposit_type" domainObjectName="ConfigDepositType"/>-->
+        <!--<table tableName="config_user_channel" domainObjectName="ConfigUserChannel"/>-->
+        <!--<table tableName="config_user_level" domainObjectName="ConfigUserLevel"/>-->
+        <!--<table tableName="config_voucher" domainObjectName="ConfigVoucher"/>-->
+        <!--<table tableName="history_user_credit" domainObjectName="HistoryUserCredit"/>-->
+        <!--<table tableName="history_user_frozen" domainObjectName="HistoryUserFrozen"/>-->
+        <!--<table tableName="history_user_level" domainObjectName="HistoryUserLevel"/>-->
+        <!--<table tableName="record_deposit" domainObjectName="RecordDeposit"/>-->
+        <!--<table tableName="record_loan" domainObjectName="RecordLoan"/>-->
+        <!--<table tableName="record_loan_deposit_matched" domainObjectName="RecordLoanDepositMatched"/>-->
+        <!--<table tableName="trans_deduction" domainObjectName="TransDeduction"/>-->
+        <!--<table tableName="trans_pre_auth" domainObjectName="TransPreAuth"/>-->
+        <!--<table tableName="trans_withdraw" domainObjectName="TransWithdraw"/>-->
+        <!--<table tableName="user_base" domainObjectName="UserBase"/>-->
+        <!--<table tableName="user_channel_wechat" domainObjectName="UserChannelWechat"/>-->
+        <!--<table tableName="user_credit_base_info" domainObjectName="UserCreditBaseInfo"/>-->
+        <!--<table tableName="user_financial" domainObjectName="UserFinancial"/>-->
+        <!--<table tableName="user_lightning" domainObjectName="UserLightning"/>-->
+        <!--<table tableName="voucher" domainObjectName="Voucher"/>-->
+        <!--<table tableName="util_message_bundle" domainObjectName="UtilMessageBundle"/>-->
+        <!--<table tableName="log_wechat_templatemsg" domainObjectName="LogWechatTemplateMsg"/>-->
+        <table tableName="user_info" domainObjectName="UserInfo"></table>
+    </context>
+</generatorConfiguration>

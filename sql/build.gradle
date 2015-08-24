@@ -1,0 +1,27 @@
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath 'org.flywaydb:flyway-gradle-plugin:3.2.1'
+    }
+}
+
+apply plugin: 'org.flywaydb.flyway'
+apply plugin: 'java'
+
+flyway {
+    url = 'jdbc:mysql://127.0.0.1:3306/thunder?useUnicode=true&characterEncoding=utf8'
+    user = 'light_rw'
+    password = 'hellozzz'
+    schemas = ['thunder']
+    locations = ["filesystem:migrations/"]
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile 'mysql:mysql-connector-java:5.1.35'
+}

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.weshare.thunder.dao.TestMapper">
+
+    <resultMap id="userResultMap" type="com.weshare.thunder.model.TestUser">
+        <id column="id" property="id"/>
+        <result column="name" property="name"/>
+        <result column="age" property="age"/>
+    </resultMap>
+
+    <select id="getUsers" resultMap="userResultMap">
+        select id,name,age from test_user
+    </select>
+
+    <insert id="insertUser" parameterType="com.weshare.thunder.model.TestUser"
+            useGeneratedKeys="true" keyProperty="id">
+        insert into test_user(name, age) values(#{name}, #{age})
+    </insert>
+
+    <insert id="insertAddress" parameterType="com.weshare.thunder.model.TestAddress"
+            useGeneratedKeys="true" keyProperty="id">
+        insert into test_address(address,test_user_id) values(#{address}, #{testUserId})
+    </insert>
+
+    <select id="getUserById" resultMap="userResultMap">
+        select * from test_user where id=#{id,jdbcType=INTEGER}
+    </select>
+
+    <update id="updateUser">
+        update test_user set name=#{name,jdbcType=VARCHAR},age=#{age,jdbcType=INTEGER} where id=#{id}
+    </update>
+
+    <delete id="deleteUser">
+        delete from test_user where id=#{id}
+    </delete>
+
+</mapper>

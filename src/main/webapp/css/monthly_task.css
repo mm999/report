@@ -1,0 +1,12 @@
+.container {
+    text-align: center;
+}
+
+.label_erp {
+    font-size: 15px;
+}
+
+#erp_btn_custom {
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
